@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Propuesta Comercial y Cotización Web - Mundo Pirotécnico</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1E293B;
+      background: #FFFFFF;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand h1 {
+      font-size: 24px;
+      font-weight: 900;
+      color: #DC2626;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand p {
+      font-size: 13px;
+      color: #64748B;
+      font-weight: 500;
+    }
+
+    .doc-meta {
+      text-align: right;
+      font-size: 12px;
+      color: #64748B;
+      line-height: 1.6;
+    }
+
+    .doc-meta strong {
+      color: #0F172A;
+    }
+
+    .intro-banner {
+      background: linear-gradient(135deg, #FEF2F2 0%, #FFF7ED 100%);
+      border: 1px solid #FECACA;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 22px;
+    }
+
+    .intro-banner h2 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #991B1B;
+      margin-bottom: 4px;
+    }
+
+    .intro-banner p {
+      color: #7F1D1D;
+      font-size: 12px;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 4px solid #DC2626;
+      padding-left: 10px;
+    }
+
+    .grid-packages {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .package-card {
+      border: 1.5px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 16px 18px;
+      position: relative;
+      background: #FFFFFF;
+      page-break-inside: avoid;
+    }
+
+    .package-card.featured {
+      border-color: #DC2626;
+      background: #FFFBFB;
+      box-shadow: 0 4px 15px rgba(220, 38, 38, 0.06);
+    }
+
+    .package-badge {
+      position: absolute;
+      top: -10px;
+      right: 18px;
+      background: #DC2626;
+      color: white;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .package-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+      border-bottom: 1px dashed #E2E8F0;
+      padding-bottom: 8px;
+    }
+
+    .package-name {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0F172A;
+    }
+
+    .package-price {
+      font-size: 18px;
+      font-weight: 900;
+      color: #DC2626;
+    }
+
+    .package-price span {
+      font-size: 12px;
+      color: #64748B;
+      font-weight: 600;
+    }
+
+    .package-desc {
+      font-size: 12px;
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 14px;
+    }
+
+    .feature-list li {
+      font-size: 11.5px;
+      color: #334155;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: #16A34A;
+      font-weight: 900;
+      font-size: 12px;
+    }
+
+    .extra-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 22px;
+      font-size: 12px;
+      page-break-inside: avoid;
+    }
+
+    .extra-table th {
+      background: #F8FAFC;
+      color: #475569;
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 2px solid #E2E8F0;
+    }
+
+    .extra-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #F1F5F9;
+      color: #334155;
+    }
+
+    .extra-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .price-tag {
+      font-weight: 800;
+      color: #DC2626;
+      white-space: nowrap;
+    }
+
+    .considerations-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      font-size: 11.5px;
+      color: #475569;
+      line-height: 1.6;
+      page-break-inside: avoid;
+    }
+
+    .considerations-box h3 {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 6px;
+    }
+
+    .considerations-box ul {
+      margin-left: 18px;
+    }
+
+    .footer {
+      border-top: 1px solid #E2E8F0;
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: #94A3B8;
+    }
+
+    .signature-area {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      page-break-inside: avoid;
+    }
+
+    .sig-line {
+      width: 42%;
+      border-top: 1px solid #CBD5E1;
+      padding-top: 8px;
+      text-align: center;
+      font-size: 11px;
+      color: #64748B;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="brand">
+      <h1>🎆 Mundo Pirotécnico</h1>
+      <p>Propuesta Comercial • Plataforma Web & Solución Digital Zafra 2026/2027</p>
+    </div>
+    <div class="doc-meta">
+      <strong>Cliente:</strong> Prato / Mundo Pirotécnico<br>
+      <strong>Elaborado por:</strong> Camila Borrelli<br>
+      <strong>Fecha:</strong> Noviembre 2026<br>
+      <strong>Validez de la oferta:</strong> 15 días
+    </div>
+  </div>
+
+  <!-- Intro Banner -->
+  <div class="intro-banner">
+    <h2>🚀 Objetivo Comercial del Proyecto</h2>
+    <p>Modernizar y maximizar las ventas de la zafra de fin de año mediante una plataforma web de alto rendimiento, optimizada para compras rápidas desde celulares (móvil), con catálogo dinámico y envío de pedidos directo a WhatsApp, complementada con producción audiovisual profesional.</p>
+  </div>
+
+  <!-- Sección Paquetes -->
+  <div class="section-title">Opciones de Implementación</div>
+
+  <div class="grid-packages">
+
+    <!-- Paquete 1 -->
+    <div class="package-card">
+      <div class="package-header">
+        <div class="package-name">Opción 1: Web Tienda Oficial (Versión Base)</div>
+        <div class="package-price">$32.000 <span>UYU</span></div>
+      </div>
+      <div class="package-desc">Desarrollo y puesta en marcha de la tienda online moderna en React + Vite para la casa central.</div>
+      <ul class="feature-list">
+        <li>Diseño responsive ultrarrápido adaptado a celulares</li>
+        <li>Catálogo interactivo con filtros (Pet Friendly, Tortas, Cañas)</li>
+        <li>Carrito de compras dinámico con total estimado en vivo</li>
+        <li>Derivación directa de pedidos armados a WhatsApp</li>
+        <li>Simulador de fuegos artificiales en Canvas interactivo</li>
+        <li>Sección de Seguridad y uso responsable</li>
+        <li>Carga inicial de productos con fotos provistas</li>
+        <li>Despliegue en la nube y conexión con dominio oficial</li>
+      </ul>
+    </div>
+
+    <!-- Paquete 2 (Destacado) -->
+    <div class="package-card featured">
+      <div class="package-badge">Recomendado Zafra</div>
+      <div class="package-header">
+        <div class="package-name">Opción 2: Web Oficial + Producción de Fotos & Videos</div>
+        <div class="package-price">$49.000 <span>UYU</span></div>
+      </div>
+      <div class="package-desc">Todo el desarrollo tecnológico de la Opción 1 + Jornada de fotografía y video profesional con cámara para jerarquizar el catálogo.</div>
+      <ul class="feature-list">
+        <li><strong>Todo lo incluido en la Opción 1</strong></li>
+        <li>Sesión fotográfica presencial de productos en local/depósito</li>
+        <li>Grabación de videos en alta calidad de efectos y productos clave</li>
+        <li>Edición digital y optimización WebP para carga instantánea</li>
+        <li>Material audiovisual listo para usar en Instagram/TikTok</li>
+        <li>Banners promocionales destacados de "Año Nuevo" y "Combos"</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Sección Sucursales -->
+  <div class="section-title">Expansión Multi-Sucursal (Web por Local)</div>
+
+  <table class="extra-table">
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Descripción</th>
+        <th>Inversión</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Web Personalizada por Sucursal</strong><br><small>(Local adicional)</small></td>
+        <td>Clonación y personalización de la plataforma base para cada local (ej. Pocitos, Paso Molino, Costa Urbana). Incluye WhatsApp específico del encargado, mapa interactivo con dirección de retiro, fotos de la fachada y horarios de atención exclusivos.</td>
+        <td class="price-tag">$7.000 UYU <small>/ local</small></td>
+      </tr>
+      <tr>
+        <td><strong>Pack Sucursales (3 o más locales)</strong></td>
+        <td>Precio bonificado para franquicias o cadenas que deseen una presencia unificada pero con canales de contacto independientes para cada punto de venta.</td>
+        <td class="price-tag">$6.000 UYU <small>/ local</small></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Servicios Adicionales y Guardia -->
+  <div class="section-title">Servicios Opcionales de Zafra & Mantenimiento</div>
+
+  <table class="extra-table">
+    <thead>
+      <tr>
+        <th>Concepto</th>
+        <th>Detalle</th>
+        <th>Inversión</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Guardia Zafral & Soporte Diciembre</strong><br><small>(Disponibilidad inmediata)</small></td>
+        <td>Soporte técnico prioritario durante todo diciembre. Modificación urgente de precios, baja inmediata de productos agotados, recambio de promociones y monitoreo de estabilidad para los días pico (23, 24, 30 y 31 de diciembre).</td>
+        <td class="price-tag">$15.000 UYU <small>/ mes</small></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Consideraciones -->
+  <div class="considerations-box">
+    <h3>📌 Factores Clave y Condiciones del Servicio</h3>
+    <ul>
+      <li><strong>Tiempo de entrega:</strong> 5 a 7 días hábiles a partir de la confirmación y entrega de datos base.</li>
+      <li><strong>Costos de terceros:</strong> El registro del dominio (.uy / .com.uy) y el hosting mensual/anual corren por cuenta del cliente (se brinda asesoramiento gratuito para su contratación económica).</li>
+      <li><strong>Forma de pago:</strong> 50% al aceptar la propuesta e iniciar el proyecto, y 50% contra entrega y publicación online.</li>
+    </ul>
+  </div>
+
+  <div class="signature-area">
+    <div class="sig-line">
+      <strong>Camila Borrelli</strong><br>
+      Desarrollo Web & Soluciones Digitales
+    </div>
+    <div class="sig-line">
+      <strong>Mundo Pirotécnico / Prato</strong><br>
+      Aceptación y Conformidad
+    </div>
+  </div>
+
+  <div class="footer" style="margin-top: 15px;">
+    <span>Documento de propuesta comercial privada y confidencial.</span>
+    <span>Página 1 de 1</span>
+  </div>
+
+</body>
+</html>
