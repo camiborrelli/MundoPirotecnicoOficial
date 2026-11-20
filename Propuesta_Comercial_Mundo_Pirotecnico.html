@@ -8,7 +8,7 @@
 
     @page {
       size: A4;
-      margin: 18mm 16mm 18mm 16mm;
+      margin: 12mm 14mm 12mm 14mm;
     }
 
     * {
@@ -21,8 +21,22 @@
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: #1E293B;
       background: #FFFFFF;
-      font-size: 13px;
-      line-height: 1.5;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    /* Paginación limpia */
+    .page {
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 260mm;
+      position: relative;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
     }
 
     .header {
@@ -30,37 +44,28 @@
       justify-content: space-between;
       align-items: flex-start;
       border-bottom: 2px solid #F1F5F9;
-      padding-bottom: 18px;
-      margin-bottom: 22px;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .brand h1 {
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 900;
       color: #DC2626;
       letter-spacing: -0.5px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
 
     .brand p {
-      font-size: 13px;
+      font-size: 12px;
       color: #64748B;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .doc-meta {
       text-align: right;
-      font-size: 12px;
+      font-size: 11.5px;
       color: #64748B;
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     .doc-meta strong {
@@ -70,66 +75,65 @@
     .intro-banner {
       background: linear-gradient(135deg, #FEF2F2 0%, #FFF7ED 100%);
       border: 1px solid #FECACA;
-      border-radius: 12px;
-      padding: 14px 18px;
-      margin-bottom: 22px;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
     }
 
     .intro-banner h2 {
-      font-size: 15px;
+      font-size: 13.5px;
       font-weight: 800;
       color: #991B1B;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .intro-banner p {
       color: #7F1D1D;
-      font-size: 12px;
+      font-size: 11.5px;
     }
 
     .section-title {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 800;
       color: #0F172A;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 8px;
       border-left: 4px solid #DC2626;
-      padding-left: 10px;
+      padding-left: 9px;
     }
 
     .grid-packages {
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      margin-bottom: 22px;
+      gap: 12px;
+      margin-bottom: 16px;
     }
 
     .package-card {
       border: 1.5px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 16px 18px;
+      border-radius: 10px;
+      padding: 14px 16px;
       position: relative;
       background: #FFFFFF;
-      page-break-inside: avoid;
     }
 
     .package-card.featured {
       border-color: #DC2626;
       background: #FFFBFB;
-      box-shadow: 0 4px 15px rgba(220, 38, 38, 0.06);
+      box-shadow: 0 3px 12px rgba(220, 38, 38, 0.05);
     }
 
     .package-badge {
       position: absolute;
-      top: -10px;
-      right: 18px;
+      top: -9px;
+      right: 16px;
       background: #DC2626;
       color: white;
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 800;
-      padding: 3px 10px;
+      padding: 2px 9px;
       border-radius: 20px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -139,44 +143,44 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       border-bottom: 1px dashed #E2E8F0;
-      padding-bottom: 8px;
+      padding-bottom: 6px;
     }
 
     .package-name {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 800;
       color: #0F172A;
     }
 
     .package-price {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 900;
       color: #DC2626;
     }
 
     .package-price span {
-      font-size: 12px;
+      font-size: 11.5px;
       color: #64748B;
       font-weight: 600;
     }
 
     .package-desc {
-      font-size: 12px;
+      font-size: 11.5px;
       color: #475569;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .feature-list {
       list-style: none;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 6px 14px;
+      gap: 5px 14px;
     }
 
     .feature-list li {
-      font-size: 11.5px;
+      font-size: 11px;
       color: #334155;
       display: flex;
       align-items: flex-start;
@@ -187,15 +191,14 @@
       content: "✓";
       color: #16A34A;
       font-weight: 900;
-      font-size: 12px;
+      font-size: 11px;
     }
 
     .extra-table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 22px;
-      font-size: 12px;
-      page-break-inside: avoid;
+      margin-bottom: 16px;
+      font-size: 11.5px;
     }
 
     .extra-table th {
@@ -203,12 +206,12 @@
       color: #475569;
       font-weight: 700;
       text-align: left;
-      padding: 10px 12px;
+      padding: 8px 10px;
       border-bottom: 2px solid #E2E8F0;
     }
 
     .extra-table td {
-      padding: 10px 12px;
+      padding: 8px 10px;
       border-bottom: 1px solid #F1F5F9;
       color: #334155;
     }
@@ -226,204 +229,206 @@
     .considerations-box {
       background: #F8FAFC;
       border: 1px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 14px 18px;
-      margin-bottom: 20px;
-      font-size: 11.5px;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      font-size: 11px;
       color: #475569;
-      line-height: 1.6;
-      page-break-inside: avoid;
+      line-height: 1.55;
     }
 
     .considerations-box h3 {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 800;
       color: #0F172A;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .considerations-box ul {
-      margin-left: 18px;
-    }
-
-    .footer {
-      border-top: 1px solid #E2E8F0;
-      padding-top: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 11px;
-      color: #94A3B8;
+      margin-left: 16px;
     }
 
     .signature-area {
-      margin-top: 25px;
+      margin-top: 15px;
       display: flex;
       justify-content: space-between;
-      page-break-inside: avoid;
     }
 
     .sig-line {
       width: 42%;
       border-top: 1px solid #CBD5E1;
-      padding-top: 8px;
+      padding-top: 6px;
       text-align: center;
-      font-size: 11px;
+      font-size: 10.5px;
       color: #64748B;
+    }
+
+    .page-footer {
+      margin-top: auto;
+      border-top: 1px solid #E2E8F0;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: #94A3B8;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <div class="header">
-    <div class="brand">
-      <h1>🎆 Mundo Pirotécnico</h1>
-      <p>Propuesta Comercial • Plataforma Web & Solución Digital Zafra 2026/2027</p>
-    </div>
-    <div class="doc-meta">
-      <strong>Cliente:</strong> Gustavo Prato / Mundo Pirotécnico<br>
-      <strong>Elaborado por:</strong> Camila Borrelli<br>
-      <strong>Fecha:</strong> Noviembre 2026
-    </div>
-  </div>
-
-  <!-- Intro Banner -->
-  <div class="intro-banner">
-    <h2>🚀 Objetivo Comercial del Proyecto</h2>
-    <p>Modernizar y maximizar las ventas de la zafra de fin de año mediante una plataforma web de alto rendimiento, optimizada para compras rápidas desde celulares (móvil), con catálogo dinámico y envío de pedidos directo a WhatsApp, complementada con producción audiovisual profesional.</p>
-  </div>
-
-  <!-- Sección Paquetes -->
-  <div class="section-title">Opciones de Implementación</div>
-
-  <div class="grid-packages">
-
-    <!-- Paquete 1 -->
-    <div class="package-card">
-      <div class="package-header">
-        <div class="package-name">Opción 1: Web Tienda Oficial (Versión Base)</div>
-        <div class="package-price">$26.000 <span>UYU</span></div>
+  <!-- PÁGINA 1: Presentación y Paquetes Principales -->
+  <div class="page">
+    <div class="header">
+      <div class="brand">
+        <h1>🎆 Mundo Pirotécnico</h1>
+        <p>Propuesta Comercial • Plataforma Web & Solución Digital Zafra 2026/2027</p>
       </div>
-      <div class="package-desc">Desarrollo y puesta en marcha de la tienda online moderna en React + Vite para la casa central.</div>
-      <ul class="feature-list">
-        <li>Diseño responsive ultrarrápido adaptado a celulares</li>
-        <li>Catálogo interactivo con filtros (Pet Friendly, Tortas, Cañas)</li>
-        <li>Carrito de compras dinámico con total estimado en vivo</li>
-        <li>Derivación directa de pedidos armados a WhatsApp</li>
-        <li>Simulador de fuegos artificiales en Canvas interactivo</li>
-        <li>Sección de Seguridad y uso responsable</li>
-        <li>Carga inicial de productos con fotos provistas</li>
-        <li>Despliegue en la nube y conexión con dominio oficial</li>
+      <div class="doc-meta">
+        <strong>Cliente:</strong> Gustavo Prato / Mundo Pirotécnico<br>
+        <strong>Elaborado por:</strong> Camila Borrelli<br>
+        <strong>Fecha:</strong> Noviembre 2026
+      </div>
+    </div>
+
+    <div class="intro-banner">
+      <h2>🚀 Objetivo Comercial del Proyecto</h2>
+      <p>Modernizar y potenciar las ventas de fin de año con una tienda online de alto rendimiento, optimizada para compras rápidas desde celulares (móvil), catálogo interactivo, derivación directa a WhatsApp y producción audiovisual profesional.</p>
+    </div>
+
+    <div class="section-title">Opciones de Implementación</div>
+
+    <div class="grid-packages">
+      <!-- Opción 1 -->
+      <div class="package-card">
+        <div class="package-header">
+          <div class="package-name">Opción 1: Web Tienda Oficial (Versión Base)</div>
+          <div class="package-price">$26.000 <span>UYU</span></div>
+        </div>
+        <div class="package-desc">Desarrollo y puesta en marcha de la tienda online moderna en React + Vite para la casa central.</div>
+        <ul class="feature-list">
+          <li>Diseño responsive ultrarrápido adaptado a celulares</li>
+          <li>Catálogo interactivo con filtros (Pet Friendly, Tortas, Cañas)</li>
+          <li>Carrito de compras dinámico con total estimado en vivo</li>
+          <li>Derivación directa de pedidos armados a WhatsApp</li>
+          <li>Simulador de fuegos artificiales en Canvas interactivo</li>
+          <li>Sección de Seguridad y uso responsable</li>
+          <li>Carga inicial de productos con fotos provistas</li>
+          <li>Despliegue en la nube y conexión con dominio oficial</li>
+        </ul>
+      </div>
+
+      <!-- Opción 2 -->
+      <div class="package-card">
+        <div class="package-header">
+          <div class="package-name">Opción 2: Web Oficial + Fotos & Videos Pro</div>
+          <div class="package-price">$38.000 <span>UYU</span></div>
+        </div>
+        <div class="package-desc">Todo el desarrollo tecnológico de la Opción 1 + Jornada presencial de fotografía y video profesional con cámara para jerarquizar el catálogo.</div>
+        <ul class="feature-list">
+          <li><strong>Todo lo incluido en la Opción 1</strong></li>
+          <li>Sesión fotográfica presencial de productos en local/depósito</li>
+          <li>Grabación de videos en alta calidad de efectos y productos clave</li>
+          <li>Edición digital y optimización WebP para carga instantánea</li>
+          <li>Material audiovisual listo para usar en Instagram/TikTok</li>
+          <li>Banners promocionales destacados de "Año Nuevo" y "Combos"</li>
+        </ul>
+      </div>
+
+      <!-- Opción 3 (Destacada Integral) -->
+      <div class="package-card featured">
+        <div class="package-badge">Solución Integral All-in-One</div>
+        <div class="package-header">
+          <div class="package-name">Opción 3: Pack Integral (Web Central + Fotos/Videos + Webs Sucursales)</div>
+          <div class="package-price">$64.000 <span>UYU</span></div>
+        </div>
+        <div class="package-desc">La solución completa para toda la firma: Opción 2 ($38.000) + hasta 4 webs personalizadas para locales ($26.000 en pack bonificado).</div>
+        <ul class="feature-list">
+          <li><strong>Todo lo incluido en la Opción 2</strong> (Web oficial + Sesión de Fotos y Videos Pro)</li>
+          <li>Hasta 4 páginas webs personalizadas e independientes para sucursales/locales</li>
+          <li>WhatsApp y canal de atención directo con el encargado de cada punto de venta</li>
+          <li>Dirección de retiro, mapa interactivo y fotos de cada fachada</li>
+          <li>Carga de catálogo unificada y sincronizada en toda la red de locales</li>
+          <li>Prioridad máxima en tiempos de implementación y entrega</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Mundo Pirotécnico • Propuesta Comercial</span>
+      <span>Página 1 de 2</span>
+    </div>
+  </div>
+
+  <!-- PÁGINA 2: Sucursales, Mantenimiento, Condiciones y Firmas -->
+  <div class="page">
+    <div class="section-title">Expansión Multi-Sucursal (Webs por Local Adicional)</div>
+
+    <table class="extra-table">
+      <thead>
+        <tr>
+          <th>Servicio</th>
+          <th>Descripción</th>
+          <th>Inversión</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Web Personalizada por Sucursal Individual</strong><br><small>(Local adicional fuera de pack)</small></td>
+          <td>Clonación y personalización de la plataforma base para cada local (ej. Pocitos, Paso Molino, Costa Urbana). Incluye WhatsApp específico del encargado, mapa interactivo con dirección de retiro, fotos de la fachada y horarios de atención exclusivos.</td>
+          <td class="price-tag">$8.000 UYU <small>/ local</small></td>
+        </tr>
+        <tr>
+          <td><strong>Pack Sucursales (3 o más locales adicionales)</strong></td>
+          <td>Precio bonificado para franquicias o locales extra que deseen una presencia unificada pero con canales de contacto independientes para cada punto de venta.</td>
+          <td class="price-tag">$6.000 UYU <small>/ local</small></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-title">Mantenimiento y Soporte Web (Opcional)</div>
+
+    <table class="extra-table">
+      <thead>
+        <tr>
+          <th>Concepto</th>
+          <th>Detalle</th>
+          <th>Inversión</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Mantenimiento y Actualizaciones</strong><br><small>(Servicio mensual opcional)</small></td>
+          <td>Actualización periódica de productos, cambio de precios, carga de nuevas fotos/combos, optimización continua de velocidad, soporte técnico y copias de seguridad.</td>
+          <td class="price-tag">$6.000 UYU <small>/ mes</small></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="considerations-box">
+      <h3>📌 Factores Clave y Condiciones del Servicio</h3>
+      <ul>
+        <li><strong>Tiempo de entrega:</strong> 10 días a partir de la confirmación y entrega de datos base.</li>
+        <li><strong>Costos de terceros:</strong> El registro del dominio (.uy / .com.uy) y el hosting mensual/anual corren por cuenta del cliente (se brinda asesoramiento gratuito para su contratación económica).</li>
+        <li><strong>Forma de pago:</strong> 50% al aceptar la propuesta e iniciar el proyecto, y 50% contra entrega y publicación online.</li>
       </ul>
     </div>
 
-    <!-- Paquete 2 -->
-    <div class="package-card">
-      <div class="package-header">
-        <div class="package-name">Opción 2: Web Oficial + Fotos & Videos Pro</div>
-        <div class="package-price">$38.000 <span>UYU</span></div>
+    <div class="signature-area">
+      <div class="sig-line">
+        <strong>Camila Borrelli</strong><br>
+        Desarrollo Web & Soluciones Digitales
       </div>
-      <div class="package-desc">Todo el desarrollo de la Opción 1 + Jornada de fotografía y video profesional con cámara para jerarquizar el catálogo.</div>
-      <ul class="feature-list">
-        <li><strong>Todo lo incluido en la Opción 1</strong></li>
-        <li>Sesión fotográfica presencial de productos en local/depósito</li>
-        <li>Grabación de videos en alta calidad de efectos y productos clave</li>
-        <li>Edición digital y optimización WebP para carga instantánea</li>
-        <li>Material audiovisual listo para usar en Instagram/TikTok</li>
-        <li>Banners promocionales destacados de "Año Nuevo" y "Combos"</li>
-      </ul>
-    </div>
-
-    <!-- Paquete 3 (Destacado Integral) -->
-    <div class="package-card featured">
-      <div class="package-badge">Solución Integral All-in-One</div>
-      <div class="package-header">
-        <div class="package-name">Opción 3: Pack Integral (Web Central + Fotos/Videos + Webs Sucursales)</div>
-        <div class="package-price">$52.000 <span>UYU</span> <small style="font-size:11px; color:#16A34A; font-weight:700;">(Incluye hasta 3 sucursales)</small></div>
+      <div class="sig-line">
+        <strong>Gustavo Prato / Mundo Pirotécnico</strong><br>
+        Aceptación y Conformidad
       </div>
-      <div class="package-desc">La solución definitiva para toda la cadena: producción de contenido audiovisual profesional, tienda oficial y webs personalizadas por local.</div>
-      <ul class="feature-list">
-        <li><strong>Todo lo incluido en la Opción 2</strong> (Web oficial + Sesión de Fotos y Videos Pro)</li>
-        <li>Hasta 3 páginas webs personalizadas e independientes para sucursales/locales</li>
-        <li>WhatsApp y canal de atención directo con el encargado de cada local</li>
-        <li>Dirección de retiro, mapa interactivo y fotos de cada fachada</li>
-        <li>Carga de catálogo unificada y sincronizada en toda la red de locales</li>
-        <li>Prioridad máxima en tiempos de implementación y entrega</li>
-      </ul>
     </div>
 
-  </div>
-
-  <!-- Sección Sucursales -->
-  <div class="section-title">Expansión Multi-Sucursal (Webs por Local Adicional)</div>
-
-  <table class="extra-table">
-    <thead>
-      <tr>
-        <th>Servicio</th>
-        <th>Descripción</th>
-        <th>Inversión</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Web Personalizada por Sucursal Individual</strong><br><small>(Local adicional fuera de pack)</small></td>
-        <td>Clonación y personalización de la plataforma base para cada local (ej. Pocitos, Paso Molino, Costa Urbana). Incluye WhatsApp específico del encargado, mapa interactivo con dirección de retiro, fotos de la fachada y horarios de atención exclusivos.</td>
-        <td class="price-tag">$8.000 UYU <small>/ local</small></td>
-      </tr>
-      <tr>
-        <td><strong>Pack Sucursales (3 o más locales adicionales)</strong></td>
-        <td>Precio bonificado para franquicias o locales extra que deseen una presencia unificada pero con canales de contacto independientes para cada punto de venta.</td>
-        <td class="price-tag">$6.000 UYU <small>/ local</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- Mantenimiento Opcional -->
-  <div class="section-title">Mantenimiento y Soporte Web (Opcional)</div>
-
-  <table class="extra-table">
-    <thead>
-      <tr>
-        <th>Concepto</th>
-        <th>Detalle</th>
-        <th>Inversión</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Mantenimiento y Actualizaciones</strong><br><small>(Servicio mensual opcional)</small></td>
-        <td>Actualización periódica de productos, cambio de precios, carga de nuevas fotos/combos, optimización continua de velocidad, soporte técnico y copias de seguridad.</td>
-        <td class="price-tag">$6.000 UYU <small>/ mes</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- Consideraciones -->
-  <div class="considerations-box">
-    <h3>📌 Factores Clave y Condiciones del Servicio</h3>
-    <ul>
-      <li><strong>Tiempo de entrega:</strong> 10 días a partir de la confirmación y entrega de datos base.</li>
-      <li><strong>Costos de terceros:</strong> El registro del dominio (.uy / .com.uy) y el hosting mensual/anual corren por cuenta del cliente (se brinda asesoramiento gratuito para su contratación económica).</li>
-      <li><strong>Forma de pago:</strong> 50% al aceptar la propuesta e iniciar el proyecto, y 50% contra entrega y publicación online.</li>
-    </ul>
-  </div>
-
-  <div class="signature-area">
-    <div class="sig-line">
-      <strong>Camila Borrelli</strong><br>
-      Desarrollo Web & Soluciones Digitales
+    <div class="page-footer">
+      <span>Documento de propuesta comercial privada y confidencial.</span>
+      <span>Página 2 de 2</span>
     </div>
-    <div class="sig-line">
-      <strong>Gustavo Prato / Mundo Pirotécnico</strong><br>
-      Aceptación y Conformidad
-    </div>
-  </div>
-
-  <div class="footer" style="margin-top: 15px;">
-    <span>Documento de propuesta comercial privada y confidencial.</span>
-    <span>Página 1 de 1</span>
   </div>
 
 </body>
